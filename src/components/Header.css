@@ -1,0 +1,273 @@
+/* Main styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.header {
+  min-height: 100vh; /* Allow header to grow if needed */
+  display: flex;
+  flex-direction: column;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(34, 20, 125, 1) 27%,
+    rgba(6, 4, 125, 1) 49%,
+    rgba(0, 0, 0, 1) 74%
+  );
+  position: relative;
+  padding-top: 80px; /* Space for navbar */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add a blur effect to the background */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+/* New style for the profession line */
+.profession-title {
+  font-size: 4rem; /* Adjust font size as needed */
+  color: #fff;
+  margin-top: 10px;
+  text-shadow: 
+    4px 4px 8px aqua,   /* Dark shadow for depth */
+    0px 0px 20px black, /* Soft blue glow */
+    0px 0px 30px yellow;   /* Additional dark shadow */
+}
+
+.navbar {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black for the navbar */
+  padding: 1rem 0;
+  margin: 20px auto; /* Center the navbar and add top margin */
+  border: 1px solid rgb(47, 47, 47);
+  border-radius: 50px; /* Rounded corners */
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Improved shadow */
+  display: flex;
+  justify-content: center; /* Center the navbar items */
+  align-items: center;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly; /* Spacing the navbar items evenly */
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-menu li {
+  margin: 0 20px; /* Increased spacing between the menu items */
+  padding: 10px;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.navbar-menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-menu li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;
+  flex: 1;
+  padding: 5% 5%;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.name-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1 1 300px; /* Allow flexibility */
+  margin: 20px;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-name,
+.last-name {
+  font-size: 8em;
+  margin: 0;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid white;
+  text-shadow: 
+    4px 4px 8px red,   /* Dark shadow for depth */
+    0px 0px 20px black, /* Soft blue glow */
+    0px 0px 30px white;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.last-name {
+  animation-delay: 3.5s;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 300px; /* Allow flexibility */
+  margin: 20px;
+}
+
+.image-section img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #000000;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Improved shadow for the image */
+}
+
+/* Typing effect animations */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 900px) {
+  .header {
+    padding-top: 40px; /* Adjusted padding for smaller screens */
+  }
+  .navbar {
+    width: 90%;
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center;
+    border-radius: 20px;
+    margin: 10px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Updated shadow for smaller screens */
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-menu li {
+    margin: 10px 0;
+  }
+
+  .header-content {
+    flex-direction: column; /* Stack image and name vertically */
+    align-items: center;
+    text-align: center;
+    padding: 20px 5%;
+  }
+
+  .first-name, .last-name {
+    font-size: 5.5rem; /* Reduce font size */
+    border-right: 2px solid white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .image-section img {
+    width: 400px;
+    height: 350px;
+    max-width: 80%;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Maintain round shape */
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-menu li {
+    margin: 10px 0;
+  }
+
+  .first-name,
+  .last-name {
+    font-size: 4rem; /* Further reduce font size */
+    border-right: 2px solid white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .profession-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .image-section img {
+    width: 300px;
+    height: 300px;
+    max-width: 80%;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+}

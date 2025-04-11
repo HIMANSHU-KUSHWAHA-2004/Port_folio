@@ -1,0 +1,15 @@
+/* src/components/Footer.css */
+
+.footer {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(34,20,125,1) 27%, rgba(6,4,125,1) 49%, rgba(0,0,0,1) 74%);
+
+  }
+  
+  .footer p {
+    margin: 5px 0;
+  }
+  

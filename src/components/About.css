@@ -1,0 +1,112 @@
+/* About Section Styling */
+.about {
+  height: auto;
+  padding: 5rem 2rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(34, 20, 125, 1) 27%, rgba(6, 4, 125, 1) 49%, rgba(0, 0, 0, 1) 74%);
+}
+
+.about-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between image and text */
+  gap: 20px;
+  max-width: 2000px; /* Fixed width for the container */
+  margin: 0 auto; /* Center the container */
+  flex-direction: row-reverse;
+}
+
+.about-image {
+  width: 40%; /* Image takes 40% of the width */
+  display: flex; /* Enable flexbox for centering */
+  justify-content: flex-end; /* Align image to the right */
+}
+
+.about-text {
+  width: 60%; /* Text area takes 60% of the width */
+}
+
+.about-text h2 {
+  font-size: 6rem; /* Large heading size */
+  color: white;
+  text-decoration: underline; /* Underlined heading */
+  margin-left: 50px;
+
+}
+
+.about-text p {
+  font-size: 1.7rem; /* Paragraph font size */
+  color: white;
+  line-height: 1.5; /* Line height for readability */
+  margin-left: 50px;
+}
+
+.about-image img {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for the image */
+  max-width: 550px; /* Maximum width for the image */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .about-text h2 {
+    font-size: 4rem; /* Smaller heading for medium screens */
+  }
+
+  .about-text p {
+    font-size: 1.4rem; /* Smaller paragraph font size */
+  }
+
+  .about-image img {
+    max-width: 400px; /* Limit image size for medium screens */
+  }
+  .about-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text */
+  }
+
+  .about-image,
+  .about-text {
+    width: 100%; /* Take full width */
+    margin: 0; /* Remove margins */
+  }
+
+  .about-image {
+    justify-content: center; /* Center image within the container */
+  }
+
+  .about-image img {
+    max-width: 300px; /* Adjust image size for smaller screens */
+  }
+
+  .about-text h2 {
+    font-size: 3rem; /* Smaller heading */
+  }
+
+  .about-text p {
+    font-size: 1.2rem; /* Smaller paragraph */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h2 {
+    font-size: 2rem; /* Smaller heading for very small screens */
+  }
+
+  .about-text p {
+    font-size: 1rem; /* Smaller paragraph font size */
+  }
+
+  .about-image img {
+    max-width: 250px; /* Smaller image size */
+  }
+}

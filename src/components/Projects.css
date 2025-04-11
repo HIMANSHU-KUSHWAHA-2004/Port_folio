@@ -1,0 +1,97 @@
+/* src/components/Projects.css */
+
+.projects {
+  padding: 40px 20px;
+  text-align: center;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(34,20,125,1) 27%, rgba(6,4,125,1) 49%, rgba(0,0,0,1) 74%);
+
+}
+
+.projects h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 6rem;
+  text-decoration: underline;
+  padding-bottom: 5rem;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-item {
+  background-color: #403636;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 600px;
+  height: 700px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-item img {
+  width: 50%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.project-item h3 {
+  margin: 15px 0 10px 0;
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+.project-item p {
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.project-links {
+  margin-top: 10px;
+}
+
+.project-links a {
+  display: inline-block;
+  margin: 5px;
+  color: #007bff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-item {
+    width: 45%;
+  }
+  .projects h2{
+    font-size: 3rem;
+  }
+  
+
+}
+
+@media (max-width: 550px) {
+  .project-item {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .project-item{
+    height: 600px;
+  }
+}

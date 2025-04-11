@@ -1,0 +1,227 @@
+/* 1. Apply box-sizing globally */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Skills Section Styling */
+.skills {
+  padding: 5rem 0; /* 80px vertical padding */
+  text-align: center; /* Center the section text */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(34, 20, 125, 1) 27%,
+    rgba(6, 4, 125, 1) 49%,
+    rgba(0, 0, 0, 1) 74%
+  );
+}
+
+.skills h2 {
+  color: #fff;
+  font-size: 6rem; /* Adjusted for better scalability */
+  text-decoration: underline;
+  padding: 1rem; /* 16px padding */
+  padding-bottom: 5rem;
+  margin: 0; /* Reset margin to prevent overflow */
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: flex-start; /* Align items to the top */
+  gap: 7rem; /* 64px gap between sections */
+  flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+  max-width: 1200px; /* Limit container width */
+  margin: 0 auto; /* Center the container */
+  padding: 0 2rem; /* 32px horizontal padding */
+}
+
+/* Ensure both headings have the same margin and padding */
+.skills-section h3,
+.soft-skills h3 {
+  font-size: 3rem; /* Adjusted for better scalability */
+  margin: 0; /* Reset margin */
+  padding-bottom: 3rem; /* 24px padding at the bottom */
+  color: #fff; /* White color for both */
+  text-align: center; /* Center the headings */
+}
+
+/* Add spacing between both sections */
+.skills-section,
+.soft-skills {
+  flex: 1 1 45%; /* Flexible basis to allow responsiveness */
+  padding: 1rem; /* 16px padding around sections */
+  min-width: 280px; /* Prevent sections from becoming too narrow */
+}
+
+/* Soft Skills List Styling */
+.soft-skills-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  color: white; /* White font color for soft skills */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items */
+  gap: 2rem; /* 20px gap between the skills */
+}
+
+.soft-skills .skill-item {
+  font-size: 1.75rem; /* Increase font size for better readability */
+  margin: 0; /* Remove margin */
+  max-width: 350px; /* Ensure text wraps properly */
+  word-wrap: break-word; /* Allow text to wrap if needed */
+  text-align: center; /* Center-align each skill */
+  padding: 0.625rem 1.25rem; /* 10px 20px padding */
+  border-radius: 0.625rem; /* 10px border-radius for a softer look */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background color */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%; /* Ensure full width within the container */
+}
+
+.soft-skills .skill-item:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Darken background on hover */
+  transform: scale(1.05); /* Slightly enlarge the skill on hover */
+}
+
+/* Technical Skills List Styling (3 Columns, 4 Rows) */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(4, auto); /* 4 rows */
+  gap: 4rem; /* Space between the items */
+  margin-top: 1.25rem; /* 20px top margin */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column; /* Stack image above name */
+  align-items: center;
+  margin: 0; /* Remove margin as gap handles spacing */
+  width: 100%; /* Full width of the grid item */
+}
+
+.skill-icon img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove gaps */
+}
+
+/* Increase the size of the language icon specifically */
+.lang-icon {
+  width: 100px; /* Desired width for language icon */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.skills-container .skill-icon:hover {
+  transform: scale(1.5); /* Increase size on hover */
+}
+
+.skill-name {
+  font-size: 1.5rem; /* Adjusted for better scalability */
+  color: #ffffff;
+  text-align: center; /* Ensure the text is centered */
+  margin-top: 0.5rem; /* 8px top margin */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .skills-container {
+    max-width: 1000px; /* Adjust container width */
+    gap: 3rem; /* 48px gap between sections */
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills h2 {
+    font-size: 3rem; /* Reduce font size for smaller screens */
+  }
+
+  .skills-section h3,
+  .soft-skills h3 {
+    font-size: 1.75rem; /* Reduce heading font size */
+  }
+
+  .soft-skills .skill-item {
+    font-size: 1.6rem; /* Slightly reduce font size for soft skills */
+  }
+
+  .skill-name {
+    font-size: 1.3rem; /* Adjust skill name font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    gap: 2rem; /* 32px gap between sections */
+    padding: 0 1rem; /* Reduce horizontal padding */
+  }
+
+  .skills-section,
+  .soft-skills {
+    flex: 1 1 100%; /* Full width on smaller screens */
+    padding: 1rem 0; /* Vertical padding */
+  }
+
+  .soft-skills .skill-item {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+    padding: 0.5rem 1rem; /* Adjust padding */
+  }
+
+  .skill-item {
+    width: 4.6875rem; /* 75px width */
+    max-width: 4.6875rem; /* 75px max-width */
+  }
+
+  .skill-icon img {
+    max-width: 6.6875rem; /* 75px max-width */
+  }
+
+  .skill-name {
+    font-size: 1.2rem; /* Adjust skill name font size */
+  }
+  .lang-icon {
+    width: 150px;/* Set the desired size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills h2 {
+    font-size: 2.5rem; /* Further reduce font size */
+  }
+
+  .skills-section h3,
+  .soft-skills h3 {
+    font-size: 1.5rem; /* Further reduce heading font size */
+  }
+
+  .soft-skills .skill-item {
+    font-size: 1.3rem; /* Further reduce font size for soft skills */
+    padding: 0.5rem 0.8rem; /* Adjust padding */
+  }
+
+  .skill-item {
+    width: 3.75rem; /* 60px width */
+    max-width: 3.75rem; /* 60px max-width */
+  }
+
+  .skill-icon img {
+    max-width: 5.75rem; /* 60px max-width */
+  }
+
+  .skill-name {
+    font-size: 1rem; /* Adjust skill name font size */
+  }
+  .lang-icon {
+    width: 150px;/* Set the desired size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
