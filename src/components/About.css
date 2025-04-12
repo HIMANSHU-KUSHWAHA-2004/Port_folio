@@ -67,46 +67,95 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about-container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align items */
-    text-align: center; /* Center text */
+    flex-direction: column;
+    align-items: center;
+    text-align: left; /* Keep text aligned to the left */
   }
 
   .about-image,
   .about-text {
-    width: 100%; /* Take full width */
-    margin: 0; /* Remove margins */
+    width: 100%;
+    margin: 0;
   }
 
   .about-image {
-    justify-content: center; /* Center image within the container */
+    justify-content: center;
   }
 
   .about-image img {
-    max-width: 300px; /* Adjust image size for smaller screens */
+    max-width: 400px;
+  }
+
+  .about-text {
+    padding: 0 1.5rem; /* Add horizontal padding */
   }
 
   .about-text h2 {
-    font-size: 3rem; /* Smaller heading */
+    font-size: 4rem;
+    margin-left: 0; /* Reset left margin */
   }
 
   .about-text p {
-    font-size: 1.2rem; /* Smaller paragraph */
+    font-size: 1.4rem;
+    margin-left: 0; /* Reset left margin */
   }
 }
 
-@media (max-width: 480px) {
-  .about-text h2 {
-    font-size: 2rem; /* Smaller heading for very small screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: left; /* Keep text aligned to the left */
   }
 
-  .about-text p {
-    font-size: 1rem; /* Smaller paragraph font size */
+  .about-image,
+  .about-text {
+    width: 100%;
+    margin: 0;
+  }
+
+  .about-image {
+    justify-content: center;
   }
 
   .about-image img {
-    max-width: 250px; /* Smaller image size */
+    max-width: 300px;
+  }
+
+  .about-text {
+    padding: 0 1rem; /* Add horizontal padding so text isn't flush against the edge */
+  }
+
+  .about-text h2 {
+    font-size: 3rem;
+    margin-left: 0; /* Reset margin so it's not offset */
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+    margin-left: 0; /* Reset margin */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .about-text h2 {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  .about-text {
+    padding: 0 1rem;
+  }
+
+  .about-image img {
+    max-width: 250px;
   }
 }
