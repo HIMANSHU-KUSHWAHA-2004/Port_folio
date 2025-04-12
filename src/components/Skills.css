@@ -130,101 +130,122 @@ body {
 }
 
 /* Responsive Adjustments */
+/* ...your existing CSS remains unchanged above... */
+
+/* Responsive Adjustments */
 @media (max-width: 1200px) {
   .skills-container {
-    max-width: 1000px; /* Adjust container width */
-    gap: 3rem; /* 48px gap between sections */
+    max-width: 1000px;
+    gap: 3rem;
   }
 }
 
 @media (max-width: 1024px) {
   .skills h2 {
-    font-size: 3rem; /* Reduce font size for smaller screens */
+    font-size: 3rem;
   }
 
   .skills-section h3,
   .soft-skills h3 {
-    font-size: 1.75rem; /* Reduce heading font size */
+    font-size: 1.75rem;
   }
 
   .soft-skills .skill-item {
-    font-size: 1.6rem; /* Slightly reduce font size for soft skills */
+    font-size: 1.6rem;
   }
 
   .skill-name {
-    font-size: 1.3rem; /* Adjust skill name font size */
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 768px) {
   .skills-container {
-    flex-direction: column; /* Stack sections vertically */
+    flex-direction: column;
     align-items: center;
-    gap: 2rem; /* 32px gap between sections */
-    padding: 0 1rem; /* Reduce horizontal padding */
+    gap: 2rem;
+    padding: 0 1rem;
   }
 
   .skills-section,
   .soft-skills {
-    flex: 1 1 100%; /* Full width on smaller screens */
-    padding: 1rem 0; /* Vertical padding */
+    flex: 1 1 100%;
+    padding: 1rem 0;
   }
 
   .soft-skills .skill-item {
-    font-size: 1.5rem; /* Reduce font size for smaller screens */
-    padding: 0.5rem 1rem; /* Adjust padding */
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
   }
 
   .skill-item {
-    width: 4.6875rem; /* 75px width */
-    max-width: 4.6875rem; /* 75px max-width */
+    width: 4.6875rem;
+    max-width: 4.6875rem;
   }
 
   .skill-icon img {
-    max-width: 6.6875rem; /* 75px max-width */
+    max-width: 6.6875rem;
   }
 
   .skill-name {
-    font-size: 1.2rem; /* Adjust skill name font size */
+    font-size: 1.2rem;
   }
+
   .lang-icon {
-    width: 150px;/* Set the desired size for smaller screens */
-    height: auto; /* Maintain aspect ratio */
+    width: 150px;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .skills h2 {
-    font-size: 2.5rem; /* Further reduce font size */
+    font-size: 2.5rem;
   }
 
   .skills-section h3,
   .soft-skills h3 {
-    font-size: 1.5rem; /* Further reduce heading font size */
+    font-size: 1.5rem;
   }
 
   .soft-skills .skill-item {
-    font-size: 1.3rem; /* Further reduce font size for soft skills */
-    padding: 0.5rem 0.8rem; /* Adjust padding */
+    font-size: 1.3rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .skills-container {
+    justify-content: center; /* ✅ Center the container */
+  }
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-items: center; /* ✅ Center grid items */
   }
 
   .skill-item {
-    width: 3.75rem; /* 60px width */
-    max-width: 3.75rem; /* 60px max-width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
   }
 
   .skill-icon img {
-    max-width: 5.75rem; /* 60px max-width */
+    max-width: 5.75rem;
   }
 
   .skill-name {
-    font-size: 1rem; /* Adjust skill name font size */
+    font-size: 1rem;
+    margin-top: 0.25rem;
   }
+
   .lang-icon {
-    width: 150px;/* Set the desired size for smaller screens */
-    height: auto; /* Maintain aspect ratio */
+    width: 120px;
   }
 }
+
 @media (max-width: 450px) {
   .skills {
     padding: 3rem 1rem;
@@ -244,6 +265,7 @@ body {
   .skills-container {
     padding: 0 1rem;
     gap: 2rem;
+    justify-content: center; /* ✅ Still centered */
   }
 
   .skills-section,
@@ -258,13 +280,18 @@ body {
   }
 
   .skills-list {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    justify-items: center; /* ✅ Still centered */
   }
 
   .skill-item {
-    width: 3.5rem;
-    max-width: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
   }
 
   .skill-icon img {
@@ -280,6 +307,7 @@ body {
     width: 120px;
   }
 }
+
 @media (max-width: 350px) {
   .skills {
     padding: 2rem 0.5rem;
@@ -299,6 +327,7 @@ body {
   .skills-container {
     padding: 0 0.5rem;
     gap: 1.5rem;
+    justify-content: center; /* ✅ Fix container alignment */
   }
 
   .skills-section,
@@ -307,7 +336,6 @@ body {
     flex: 1 1 100%;
   }
 
-  /* 🔽 SOFT SKILLS SECTION TWEAKS */
   .soft-skills {
     max-width: 100%;
     width: 100%;
@@ -326,11 +354,16 @@ body {
   .skills-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    justify-items: center; /* ✅ Fix skill alignment */
   }
 
   .skill-item {
-    width: 3rem;
-    max-width: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
   }
 
   .skill-icon img {
@@ -346,4 +379,19 @@ body {
     width: 90px;
   }
 }
+@media (max-width: 450px) {
+  .skills-list {
+    margin: 0 auto;           /* Center the grid container */
+    width: fit-content;       /* Shrink grid to content width */
+  }
+}
+
+@media (max-width: 350px) {
+  .skills-list {
+    margin: 0 auto;           /* Center the grid container */
+    width: fit-content;       /* Shrink grid to content width */
+  }
+}
+
+
 
