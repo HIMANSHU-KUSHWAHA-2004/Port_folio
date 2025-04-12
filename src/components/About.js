@@ -15,7 +15,7 @@ const About = () => {
         <div className="about-text">
           <h2>About Me</h2>
           <p>
-          <b>Hello! I'm Himanshu Kushwaha, a passionate software developer with a strong ambition to grow into a skilled data analyst.</b> I love breaking down complex problems and turning them into practical, data-driven solutions. While my background is rooted in software development, I also bring experience in web technologies like React, JavaScript, and CSS. Lately, I’ve been exploring the world of data—leveraging tools and AI to analyze trends, automate processes, and improve decision-making. I'm always curious, eager to learn, and driven to make an impact through technology and data.
+          <b>Hello! I'm Himanshu Kushwaha, a passionate software developer with a strong ambition to grow into a skilled Data analyst.</b> I love breaking down complex problems and turning them into practical, data-driven solutions. While my background is rooted in software development, I also bring experience in web technologies like React, JavaScript, and CSS. Lately, I’ve been exploring the world of data—leveraging tools and AI to analyze trends, automate processes, and improve decision-making. I'm always curious, eager to learn, and driven to make an impact through technology and data.
           </p>
           <p>
             When I'm not coding, I enjoy watching anime, playing cricket, talking with friends, and exploring new tech trends to keep my mind fresh and inspired.
