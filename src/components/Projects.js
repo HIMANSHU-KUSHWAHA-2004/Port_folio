@@ -17,7 +17,7 @@ const projects = [
     technologies: ['Python', 'JSON'],
     image: `${process.env.PUBLIC_URL}/pics/bank.png`,
     github: 'https://github.com/yourusername/project-two',
-    liveDemo: '#',
+    liveDemo: `${process.env.PUBLIC_URL}/project/project_Bank_oops_1`, // The .exe file path
   },
   {
     title: 'Music Player',
