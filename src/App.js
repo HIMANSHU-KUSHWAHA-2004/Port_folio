@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-        <title>Your Name - Portfolio</title>
+        <title>Himanshu Kushwaha - Portfolio</title>
         <meta name="description" content="Portfolio website of Your Name showcasing projects and skills." />
         <meta name="keywords" content="Your Name, Portfolio, Web Developer, Projects" />
         <meta property="og:title" content="Your Name - Portfolio" />

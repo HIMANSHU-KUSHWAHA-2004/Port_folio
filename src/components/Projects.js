@@ -24,7 +24,7 @@ const projects = [
     description: 'A simple music player that plays songs from a specified directory using Python, Tkinter, and OS modules.',
     technologies: ['Python', 'Tkinter', 'OS', 'PIL'],
     image: `${process.env.PUBLIC_URL}/pics/mus.png`,
-    github: 'https://github.com/yourusername/project-three',
+    github: 'https://github.com/HIMANSHU-KUSHWAHA-2004/musix.git',
     liveDemo: '#',
   },
 ];
