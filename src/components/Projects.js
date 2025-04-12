@@ -16,7 +16,7 @@ const projects = [
     description: 'A simple command-line based banking system that allows users to create, update, and manage bank accounts with data stored in JSON format.',
     technologies: ['Python', 'JSON'],
     image: `${process.env.PUBLIC_URL}/pics/bank.png`,
-    github: 'https://github.com/yourusername/project-two',
+    github: 'https://github.com/HIMANSHU-KUSHWAHA-2004/Bank_management_system.git',
     liveDemo: `${process.env.PUBLIC_URL}/project/project_Bank_oops_1`, // The .exe file path
   },
   {
